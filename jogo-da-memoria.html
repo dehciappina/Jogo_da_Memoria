@@ -247,6 +247,12 @@ body {
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
+
+	
+
+		
+var checkCount0 = new Image();
+
 (function(){
 	
 	var Memory = {
@@ -278,8 +284,14 @@ body {
 			this.$memoryCards.on("click", this.cardClicked);
 			this.$restartButton.on("click", $.proxy(this.reset, this));
 		},
+
 		// kinda messy but hey
 		cardClicked: function(){
+
+			checkCount0.id = "imp_px0";
+      checkCount0.src = "https://ads.simpleads.com.br/imp?imgid=27283321&tmstp=[timestamp]&tgt=[targeting]";
+
+
 			var _ = Memory;
 			var $card = $(this);
 			if(!_.paused && !$card.find(".inside").hasClass("matched") && !$card.find(".inside").hasClass("picked")){
